@@ -1,0 +1,64 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="jquery.vars.js"></script>
+    <script>
+      $(document).ready(function(){
+        $(':button').click(function(){
+          var vars = $('form').vars();
+          $.post('teste.php',
+            vars,
+          function(){
+
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <form>
+      <p>
+        <input type="text" name="casa">
+      </p>
+      <p>
+        <input type="checkbox" name="codcidade">
+      </p>
+      <p>
+        <input type="radio" name="nome" value="1">
+      </p>
+      <p>
+        <input type="radio" name="nome" value="2">
+      </p>
+      <p>
+        <textarea name="textarea"></textarea>
+      </p>
+      <p>
+        <select name="select">
+          <option value="30">30</option>
+        </select>
+      </p>
+      <p>
+        <select name="select" multiple>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </p>
+      <p>
+        <input type="button" value="mostrar">
+      </p>
+    </form>
+  </body>
+</html>
