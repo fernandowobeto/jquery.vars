@@ -12,7 +12,12 @@ and open the template in the editor.
     <script>
       $(document).ready(function(){
         $(':button').click(function(){
+          
+          //capturando os valores dos elementos na tela baseados no name com este plugin
           var vars = $('form').vars();
+          //adicionando nova propriedade ao objeto chamado tabela
+          vars.tabela = 'teste';
+
           $.post('teste.php',
             vars,
           function(){
